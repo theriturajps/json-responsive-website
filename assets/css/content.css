@@ -1,0 +1,88 @@
+main {
+    margin-top: 6em;
+    padding: 14px;
+}
+
+.content_container {
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+}
+
+/* Style for each content item */
+.content_item {
+    padding: 8px;
+    background: cyan;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: 3px solid hsl(220, 24%, 15%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p.p_title {
+    font-size: 1.2em;
+    font-family: serif;
+    font-weight: bold;
+    margin-top: 0.2em;
+}
+
+p.p_description {
+    font-size: 13px;
+    font-family: cursive;
+}
+
+.thumbnail_Img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.content_btn {
+    margin-top: 0.8rem;
+    display: flex;
+    justify-content: center; /* Align buttons horizontally in center */
+    flex-wrap: wrap; /* Wrap buttons to next line if they don't fit in one line */
+    gap: 5px; /* Space between buttons */
+}
+
+a.a_btn {
+    line-height: 1.5em;
+    display: inline-block;
+    text-align: center;
+    background: hsl(220, 24%, 12%);
+    font-size: 11px;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* For mobile view (less than 768px) */
+@media screen and (max-width: 767px) {
+    .content_container {
+        grid-template-columns: 1fr;
+    }
+    .content_item {
+        width: 100%;
+    }
+}
+
+/* For tablet view (768px - 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .content_container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* For desktop view (greater than 1024px) */
+@media screen and (min-width: 1025px) {
+    .content_container {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .content_item {
+        max-width: 300px;
+    }
+}
