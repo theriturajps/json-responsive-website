@@ -6,7 +6,7 @@ function truncateDescription(description, maxLength) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("/assets/content.json")
+    fetch("https://theriturajps.github.io/json-responsive-website/assets/content.json")
         .then(response => response.json())
         .then(data => {
             const contentContainer = document.getElementById("contentContainer");
